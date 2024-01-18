@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/StoreYxWms/StoreYxWms.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "publish",
+            "command":"dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/StoreYxWms/StoreYxWms.csproj",
+            ],
+            "problemMatcher": "$tsc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/src/StoreYxWms/StoreYxWms.csproj"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/src/StoreYxWms"
+            },
+            "problemMatcher": "$tsc"
+        }
+    ]
+}
